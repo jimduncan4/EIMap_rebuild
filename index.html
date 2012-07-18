@@ -42,7 +42,7 @@
                     <li class="cn"><a href="http://www.worldbank.org.cn/Chinese">中文</a></li>
                     <li class="more last"><a href=	"http://web.worldbank.org/WBSITE/EXTERNAL/0,,contentMDK:20130470~pagePK:50016803~piPK:50016805~theSitePK:13,00.html">View more</a></li>
 				</ul>
-            </div>
+            </div> <!--#hdrLang//-->
             <div class="network-search">
                 <form id="wbbase-search-form" method="post" accept-charset="UTF-8" action="./">
                     <div>
@@ -54,7 +54,7 @@
                         <input type="hidden" value="wbbase_search_form" id="edit-wbbase-search-form" name="form_id">
                     </div>
                 </form>
-            </div>
+            </div> <!--#newtwork-search//-->
             <div class="socialLinks clearfix">
             	<a href="http://www.facebook.com/worldbank"><img src="./images/icon_fb.png" alt="facebook" width="16" height="16" /></a> | 
             	<a href="http://www.twitter.com/worldbank"><img src="./images/icon_twitter.png" alt="twitter" width="16" height="16" /></a>
@@ -103,7 +103,7 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> <!--#share//-->
             <div id="share_window" style="display: none;">
                 <a id="close_embed" href="#" style="" title="Close this embed window.">[x]</a>
                 <h3 style="color: #FFF">Embed this map by copying the text below and pasting it into your blog or website.</h3>
@@ -129,7 +129,7 @@
                             </h1>
                         </div>
                     </div>
-                </div>
+                </div> <!--#map-content-header//-->
                 
                 <div id="map-area">
                     <div id="map-content-hdr2">
@@ -161,9 +161,9 @@
                                     <li class="s9"><a  sector-name="water" original-title="Water, sanitation and flood protection" class="sectorcontrol inactive" id="sectorcontrol_water" href="#">9</a></li>
                                     <li class="s10"><a sector-name="education" original-title="Education" class="sectorcontrol inactive" id="sectorcontrol_education" href="#">10</a> </li>            
                                 </ul>
-                            </div>
+                            </div> <!--#map-content-icons2//-->
                         </div>
-                    </div>
+                    </div><!--#map-content-hdr2//-->
         
 
                     <div id="map-content-hdr3">
@@ -217,19 +217,21 @@
                                     <li class="eoildeposit"><a  sector-name="oildeposit" original-title="Oil fields" class="active" id="oildeposits_control" href="#">1</a></li>
                                     <li class="eoilwell"><a  sector-name="oilwell" original-title="Oil wells" class="active" id="oilwells_control" href="#">2</a></li>
                                 </ul>
-                            </div>
+                            </div><!--#map-content-icons2//-->
                         </div>
-                    </div>
+                    </div> <!--#map-content-hdr3//-->
 
-                    <div style="height: 530px;" id="wb_map_wrapper"><div id="wb_map" class="" style="height: 520px; position: relative"></div>
-                    </div>
+                    <div style="height: 530px;" id="wb_map_wrapper">
+                        
+                        <div id="wb_map" class="" style="height: 520px; position: relative">
+                        </div>
+                    
+                    </div><!--#wb_map_wrapper//-->
 
-                </div>
+                </div><!--#map-area//-->
 
-                <!--Table Data Begins-->
-                <div id="map-table">
-                </div>
-                <!--Data Table Ends-->
+                <div id="map-table"><!--Table Data Begins-->
+                </div><!--Data Table Ends-->
 
                 <style type="text/css" media="screen">
                     #project-info th#th-header-0 { width: 20%}
@@ -294,10 +296,19 @@
     </div>
     
     <div id="network-breadcrumb"><div class="limiter clear-block">
-        <span class="breadcrumb-link"><a class="breadcrumb-link-home">You are here</a></span><span class="breadcrumb-link breadcrumb-first">
-            <a href="http://www.worldbank.org/projects">Projects &amp; Operations</a></span>
-    	<span class="breadcrumb-link breadcrumb-first"><a href="http://maps.worldbank.org">Map</a></span>
-        <a class="breadcrumb-link" href="./" title='World Bank: World'>World</a><a class="breadcrumb-link " href="./extractives">Extractive Industries</a><a class="breadcrumb-link " href="./extractives/afr">Extractives in Africa</a><a class="breadcrumb-link breadcrumb-last" href="./extractives/afr/ghana">Ghana</a>
+        <span class="breadcrumb-link">
+            <a class="breadcrumb-link-home">You are here</a>
+        </span>
+        <span class="breadcrumb-link breadcrumb-first">
+            <a href="http://www.worldbank.org/projects">Projects &amp; Operations</a>
+        </span>
+    	<span class="breadcrumb-link breadcrumb-first">
+            <a href="http://maps.worldbank.org">Map</a>
+        </span>
+        <a class="breadcrumb-link" href="./" title='World Bank: World'>World</a>
+        <a class="breadcrumb-link " href="./extractives">Extractive Industries</a>
+        <a class="breadcrumb-link " href="./extractives/afr">Extractives in Africa</a>
+        <a class="breadcrumb-link breadcrumb-last" href="./extractives/afr/ghana">Ghana</a>
         
     </div>
     </div>
