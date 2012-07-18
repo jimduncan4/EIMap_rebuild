@@ -145,46 +145,15 @@
             <li>
               <a href="#" id="layercontrol_indicators" class="arwOrange" onclick="wb.setIndicator(); return false">INDICATORS</a>
               <ul class="dropmenu_options">
-                
-                
                 <li><a href="#" onclick="wb.setIndicator('Population Density'); return false">Population Density</a></li>
-                
-                
-                
                 <li><a href="#" onclick="wb.setIndicator('Unemployment Rate'); return false">Unemployment Rate</a></li>
-                
-                
-                
                 <li><a href="#" onclick="wb.setIndicator('Malnutrition'); return false">Malnutrition</a></li>
-                
-                
-                
                 <li><a href="#" onclick="wb.setIndicator('Infant Mortality'); return false">Infant Mortality</a></li>
-                
-                
-                
                 <li><a href="#" onclick="wb.setIndicator('Maternal Health'); return false">Maternal Health</a></li>
-                
-                
-                
-                <li><a href="#" onclick="wb.setIndicator('Total employment'); return false">Total employment</a></li>
-                
-                
               </ul>
             </li>
           </ul>
           
-<ul id="activities_menu" class="map-options dropmenu">
-  <li class="sectors"><span>ACTIVITIES: </span></li>
-  <li><a href="#" id="layercontrol_projects" class="arwOrange" onclick="return wb.toggleSector('none',false)">By Sector</a>
-    <ul class="dropmenu_options">
-      <li><a href="#" onclick="wb.toggleSector('all', true); return false">By Sector</a></li>
-      <li><a href="#" onclick="wb.toggleSector('counts_admin1', true); return false">By Count</a></li>
-      <li><a href="#" onclick="wb.toggleSector('none',false); return false">No Activities</a></li>
-    </ul>
-  </li>
-</ul>
-
       <div id="map-content-icons">
         <div id="map-content-icons2">
           <ul>
@@ -202,29 +171,10 @@
             <li class="s9"><a  sector-name="water" original-title="Water, sanitation and flood protection" class="sectorcontrol inactive" id="sectorcontrol_water" href="#">9</a></li>
             <li class="s10"><a sector-name="education" original-title="Education" class="sectorcontrol inactive" id="sectorcontrol_education" href="#">10</a> </li>            
               
-             <li class="s11 all"><form action="" method="get">
-                <input name="input" id="sall" class="" type="checkbox" value=""./>
-              </form></li>
-            <li class="all">ALL</li>
-            
           </ul>
         </div>
       </div>
-      <div id="map-content-regions" style="display:none">
-        <ul class="radio-prov">
-          <li class="control" onclick="wb.toggleSector('counts_admin1', true); return false">
-            <input type="radio" id="select_province" value="province" name="by_region"./>
-            <label>PROVINCE</label>
-          </li>
-          <li class="control" onclick="wb.toggleSector('counts_admin2', true); return false">
-            <input type="radio" id="select_district" value="district"  name="by_region"./>
-            <label>DISTRICT</label>
-          </li>
-        </ul>
-      </div>       
-
-  
-        </div>
+    </div>
         
         
         <div id="map-content-hdr3">
@@ -254,8 +204,8 @@
   </li>
 </ul>
 
-<div id="map-content-icons">
-  <div id="map-content-icons2">
+<div id="map-content-icons-ei">
+  <div id="map-content-icons2-ei">
     <ul id="mines_sectors">
       <li style="margin-left: 11px; margin-right: 11px;">Mines:</li>
       <li class="egoldmine"><a  sector-name="gold" original-title="Gold" class="active" id="Goldmine_control" href="#">1</a></li>
@@ -410,7 +360,7 @@
   wb = new F1.WorldBank();
   var projects = [];
       
-  wb.init("152433",  "Ghana", "Extractives in Africa", {projects_count: '39', locations_count: '14', projects: projects, locations_layer: 0, indicators: ['Population Density','Unemployment Rate','Malnutrition','Infant Mortality','Maternal Health','Total employment'], layers: null, page_type: "country", thematic_area: "extractives_controls"}, false);
+  wb.init("152433",  "Ghana", "Extractive Industries", {projects_count: '39', locations_count: '14', projects: projects, locations_layer: 0, indicators: ['Population Density','Unemployment Rate','Malnutrition','Infant Mortality','Maternal Health'], layers: null, page_type: "country", thematic_area: "extractives_controls"}, false);
   
   }
 </script>
