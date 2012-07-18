@@ -46,6 +46,14 @@ function initializeEvents() {
            return wb.toggleExtractive("Mineral deposits", jq(this).attr("original-title"))
        });
     });
+    
+    jq.each(jq('#new_button li a'), function(index,el) {
+            jq(el).tipsy({gravity: jq.fn.tipsy.autoNS});
+            jq(el).click(function() {
+                         return wb.toggleExtractive("Diamond deposits", jq(this).attr("original-title"))
+                         });
+            });
+    
     jq.each(jq('#oil_sectors li a'), function(index,el) {
        jq(el).tipsy({gravity:  jq.fn.tipsy.autoNS});
        jq(el).click(function() {
