@@ -546,6 +546,11 @@ ul.links li, ul.links li a{
     margin-right: 11px;
     width: 19px;
 }
+#map-content-icons ul li.ediamonddeposit a {
+    background: url("img/extractives-icons.gif") no-repeat scroll -150px 0 transparent;
+    margin-right: 11px;
+    width: 19px;
+}
 #map-content-icons ul li.emanganesedeposit a:hover, #map-content-icons ul li.emanganesedeposit a.active {
     background: url("img/extractives-icons.gif") no-repeat scroll -150px -19px transparent;
     width: 19px;
