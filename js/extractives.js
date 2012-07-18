@@ -2,6 +2,7 @@
 F1.WorldBank.extractives = {
     "Mineral deposits": {},
     "Population density": {},
+ "Diamond deposits": {},
     "Oil wells": {
 "infoWindowFilter": {"title": "$[Oil field name]","subtitle": "Total production: $[Lift total] barrels","tabs": [{"title": "About","type": "text","value": "Estimated size: $[Estimated size] million barrels\nOther companies: $[Other companies]\nPrimary company: $[Primary company]\nPrimary company stake: $[Primary company stake]\nGNPC stake: $[GNPC stake]"},{"title": "Sales","type": "text","value": "Sale total: GHC $[Sale total]\nThese data are preliminary, and represent the GNPC-reported sale value of their single oil lift on the market. These data do not reflect the actual amount of money received by the government of Ghana from the sale. For more information on this data, please refer to the \u003Ca target=\"_new\" href=\"http://maps.worldbank.org/extractives/about\"\u003EAbout page \u003C/a\u003E"},{"title": "Production","type": "text","value": "Lift total: $[Lift total] barrels\nThe data here were gathered from GNPC and media sources, and represent the total amount of crude oil lifted from the selected oil field. For more information on this data, please refer to the \u003Ca target=\"_new\" href=\"http://maps.worldbank.org/extractives/about\"\u003EAbout page \u003C/a\u003E"},{"title": "Environment","type": "text","value": "This data is not available yet, but will be added as it becomes available."}]
         },
