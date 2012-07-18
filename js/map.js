@@ -102,6 +102,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	"Unemployment Rate": {source: "finder:", title:"Unemployment Rate", subtitle: "", styles: { type: "CHOROPLETH", stroke: {color: 0x222222}, fill: { colors: [0xFEE5D9, 0xFCAE91, 0xFB6A4A, 0xDE2D26, 0xA50F15], categories: 5, classificationNumClasses: 5, classificationType: "EQUAL INTERVAL", opacity: 0.75, selectedAttribute: "Unemployment Rate"}}, infosubtitle: "The percentage of the regional population not employed in the 12 months prior to the survey", table: null, description: "The percentage of the population in each first-order administrative unit that were not employed in the 12 months prior to the survey. Source:  <a href='http://www.measuredhs.com/countries/country_main.cfm?ctry_id=14' target='_new'>Demographic and Health Surveys by International International</a>."},	
 	"Population Density": {source: "finder:", title:"Population Density", subtitle: "Per square kilometer", styles: { type: "CHOROPLETH", stroke: {color: 0x222222}, fill: { colors: [0xFEE5D9, 0xFCAE91, 0xFB6A4A, 0xDE2D26, 0xA50F15], categories: 5, classificationNumClasses: 5, classificationType: "QUANTILE", opacity: 0.75, selectedAttribute: "Population density"}}, infosubtitle: null, table: null, description: "Population Density, measured in population per square kilometers, is a result of calculations made by the Mapping for Results team. Population data was compiled from statistics bureaus and used to calculate population density. The population data was divided by the total area for each province or district. Official population density statistics were used in place of these calculations where available. These data are estimates only and are not official numbers."},
 	"Mineral deposits": {source: "finder:", title:"Mineral deposits", selectedAttribute: "mineral", styles: {}},
+ "Diamond deposits": {source: "finder:", title:"Diamond deposits", selectedAttribute:"grade",styles: {}},
 	"Mines": {source: "finder:", title:"Mines", selectedAttribute: "mines", styles: {}},
 	"Oil wells": {source: "finder:", title:"Oil wells", selectedAttribute: "oil", styles: {}}, 
 	"District revenues": {source: "finder:", title:"District revenues", selectedAttribute: "TOTAL_REC", styles: {}}
@@ -367,7 +368,19 @@ if(typeof(F1)=='undefined') {F1 = {};}
                  }
              }
              self.showVisibleMines();            
-         } else if(layer == "Mineral deposits") {
+ } else if (layer == "Diamond deposits") {
+ var classname="#" + sector + "deposit_control";
+ if jq(classname).hasClass("inactive"){
+ jq(classname).removeClass('inactive').addClass('active');
+ self.map.showLayer(self.stylelayers["Diamond deposits"].guid, true);
+ } else {
+ jq(classname).removeClass('active').addClass('active');
+ self.map.showLayer(self.stylelayers["Diamond deposits"].guid, false);
+ }
+
+ 
+ }
+             else if(layer == "Mineral deposits") {
              var classname = "#" + sector + "deposit_control";
              if(visible == true || jq(classname).hasClass("inactive")) {
                  if(sector == "all") {
@@ -429,7 +442,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
             self.map.showLayer(self.stylelayers[layer].guid, false);
         }
     },
-	toggleSector: function(sector,visible,refreshCharts) {
+ 
+ 	toggleSector: function(sector,visible,refreshCharts) {
 	  var self = this;
 	  var visibleExpression = "";
 	  if(self.stylelayers["Project Locations"] === undefined || self.stylelayers["Project Locations"] === null) // World Map
@@ -1102,7 +1116,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	},	  
     getLayers: function() {
         var self = this;
-        var findlayers = ["Indicators", "Project Locations", "Project Counts", "Population", "Poverty", "Infant Mortality", "Maternal Health", "Malnutrition", "Unemployment Rate", "Population Density", "Mines", "Oil wells", "Oil fields", "District revenues", "Mineral deposits", "No Data", "Total employment"];
+        var findlayers = ["Indicators", "Project Locations", "Project Counts", "Population", "Poverty", "Infant Mortality", "Maternal Health", "Malnutrition", "Unemployment Rate", "Population Density", "Mines", "Oil wells", "Oil fields", "District revenues", "Mineral deposits", "Diamond deposits", "No Data", "Total employment"];
         possibleLayers = self.map.getLayers();
         
         var index;
