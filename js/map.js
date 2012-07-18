@@ -370,11 +370,11 @@ if(typeof(F1)=='undefined') {F1 = {};}
              self.showVisibleMines();            
  } else if (layer == "Diamond deposits") {
  var classname="#" + sector + "deposit_control";
- if jq(classname).hasClass('inactive'){
+ if (jq(classname).hasClass('inactive')){
  jq(classname).removeClass('inactive').addClass('active');
  self.map.showLayer(self.stylelayers["Diamond deposits"].guid, true);
  } else {
- jq(classname).removeClass('active').addClass('active');
+ jq(classname).removeClass('active').addClass('inactive');
  self.map.showLayer(self.stylelayers["Diamond deposits"].guid, false);
  }
 
