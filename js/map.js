@@ -307,7 +307,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  }
       
       var s_attr = F1.WorldBank.extractives[indicator]
-	  if(attribute == "Icons"){
+	  if(attribute == "Location"){
         self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Icons"]);
 	  } else {
     	  s_attr = F1.WorldBank.extractives[indicator][attribute];
