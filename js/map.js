@@ -605,6 +605,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  var self = this;
 	  
 	  log("self.current_indicator",self.current_indicator)
+	  log("indicator", indicator)
 	  if(self.stylelayers[self.current_indicator] !== undefined)
 		self.map.showLayer(self.stylelayers[self.current_indicator].guid, false);
 		
@@ -614,7 +615,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  }
 	  else {
 		jq('#layercontrol_indicators').html(indicator);
-		
+		log("html attached")
 		var style = F1.WorldBank.indicators[indicator].styles;
 		style.source = self.stylelayers[indicator].source;
 		
