@@ -309,7 +309,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
       var s_attr = F1.WorldBank.extractives[indicator];
       log ("s_attr before location",s_attr);
 	  if(attribute == "Location"){
-	  	self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"Mineral type",categories:{"Gold": iconhost+"gold-14.png","Manganese": iconhost+"manganese-14.png","Bauxite": iconhost+"bauxite-14.png","Other": iconhost+"other-14.png"}});
+	  	self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"Mineral type",categories:{"Gold": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/gold-14.png","Manganese": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/manganese-14.png","Bauxite": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/bauxite-14.png","Other": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/other-14.png"}});
 	  	checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Icons"]);
 	  	log ("Checking F1 string", checkstr);
 	  } else {
