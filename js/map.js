@@ -618,6 +618,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	setIndicator: function(indicator,visible) {
 	  var self = this;
 	  
+	  log("indicator", indicator)	  
 	  log("self.current_indicator",self.current_indicator)
 	  if(self.stylelayers[self.current_indicator] !== undefined)
 		self.map.showLayer(self.stylelayers[self.current_indicator].guid, false);
