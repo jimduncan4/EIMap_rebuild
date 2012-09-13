@@ -309,7 +309,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
       var s_attr = F1.WorldBank.extractives[indicator];
       log ("s_attr before location",s_attr);
 	  if(attribute == "Location"){
-	  	self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Location"]);
+	  	self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Icons"]);
 	  	checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Location"]);
 	  	log ("Checking F1 string", checkstr);
 	  } else {
