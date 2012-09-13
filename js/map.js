@@ -306,13 +306,17 @@ if(typeof(F1)=='undefined') {F1 = {};}
           self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
 	  }
       
-      var s_attr = F1.WorldBank.extractives[indicator]
+      var s_attr = F1.WorldBank.extractives[indicator];
+      log ("s_attr before location",s_attr);
 	  if(attribute == "Location"){
-        self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Location"]);
+	  	self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Location"]);
+	  	checkstr = F1.WorldBank.extractives[indicator]["Location"];
+	  	log ("Checking F1 string", checkstr);
 	  } else {
     	  s_attr = F1.WorldBank.extractives[indicator][attribute];
     	  // s_attr.icon.selectedAttribute = attribute;
 	      self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
+	      log("s_attr inside non-location",s_attr);
 	  }
 	  // self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
 	  //       title: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["title"], 
