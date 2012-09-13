@@ -1,6 +1,6 @@
 (function(){
 F1.WorldBank.extractives = {
-    var iconhost="jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank"
+    var iconhost="jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank";
     "Mineral deposits": {},
     "Population density": {},
      "Oil wells": {
