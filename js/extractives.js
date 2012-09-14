@@ -3,7 +3,7 @@ var iconhost = "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldban
 F1.WorldBank.extractives = {
     
     "Mineral deposits": {
-        "Deposits":{"attribute":"mineral ty","categories":{"Gold":iconhost+"extractives/small_gold.png","Bauxite":iconhost+"extractives/small_bauxite.png","Manganese":iconhost+"extractives/small_manganese.png","Other":iconhost+"extractives/small_other.png"}}
+        "Deposits":{"icon":{"opacity":0.75,"size":1},"attribute":"mineral ty","categories":{"Gold":iconhost+"extractives/small_gold.png","Bauxite":iconhost+"extractives/small_bauxite.png","Manganese":iconhost+"extractives/small_manganese.png","Other":iconhost+"extractives/small_other.png"}}
         },
     "Population density": {},
     "Oil wells": {
