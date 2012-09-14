@@ -318,9 +318,9 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	      self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
 	      log("s_attr inside non-location",s_attr);
 	  }
-	  // self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
-	  //       title: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["title"], 
-	  //       subtitle: s_attr["infoWindowFilter"]["subtitle"], tabs: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["tabs"]});
+	  self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
+	         title: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["title"], 
+	         subtitle: s_attr["infoWindowFilter"]["subtitle"], tabs: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["tabs"]});
 	  jq('#layercontrol_extractives').html(title);
 	  return false;
 	},
