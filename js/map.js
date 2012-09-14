@@ -1326,8 +1326,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
             self.map.setMapStyle( {zoom: { offset: {x:15,y:90}}} )
             self.setExtractiveIndicator('Mines','Total production','Production',true)
             self.setExtractiveIndicator('Oil wells','Lift total','Production',true)
-            self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,F1.WorldBank.extractives["Mines"]["Location"}})
-            self.map.addLayerCategoryFilter(self.stylelayers["Mineral deposits"].guid,F1.WorldbBank.extractives["Mineral deposits"]["Deposits"]}})
+            self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,F1.WorldBank.extractives["Mines"]["Location"])
+            self.map.addLayerCategoryFilter(self.stylelayers["Mineral deposits"].guid,F1.WorldbBank.extractives["Mineral deposits"]["Deposits"])
             self.minesPieChart() 
         }
         self.loadState();
