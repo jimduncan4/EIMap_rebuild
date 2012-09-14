@@ -310,8 +310,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
 		log ("s_attr before location",s_attr);
 	  	
 	  	if(attribute == "Location"){
-	  		self.map.setLayerStyle(self.stylelayers[indicator].guid, { type: "POINT", icon: { size: 5, symbol: "flagIcon" } });
-	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"Mineral type",categories:{"Gold":"http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/gold-14.png"}});
+	  		self.map.setLayerStyle(self.stylelayers[indicator].guid, { type: "POINT", icon: { size: 1, symbol: "flagIcon" } });
+	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"mineral ty",categories:{"Gold":"http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/gold-14.png"}});
 	  		checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Icons"]);
 	  		log ("Checking F1 string", checkstr);
 	  	} 
