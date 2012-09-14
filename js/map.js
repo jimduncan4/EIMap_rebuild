@@ -310,7 +310,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 		log ("s_attr before location",s_attr);
 	  	
 	  	if(attribute == "Location"){
-	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"Mineral type",categories:{"Gold":"http://www.icons-land.com/images/products/VistaEmoticons.jpg"}});
+	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Icons"]);
 		  	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:1}});
 		  	checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Icons"]);
 	  		log ("Checking F1 string", checkstr);
