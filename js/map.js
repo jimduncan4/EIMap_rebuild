@@ -439,7 +439,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
         var layer = "Mineral deposits"
         
         self.map.clearFilters(self.stylelayers[layer].guid);
-        //self.map.showLayer(self.stylelayers[layer].guid, true);
+        self.map.showLayer(self.stylelayers[layer].guid, true);
         
         var visibleDeposits = jq.map(jq('#ore_sectors li a'), function(el,index) {
             if( jq(el).hasClass('active'))
