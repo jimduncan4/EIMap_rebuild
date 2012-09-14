@@ -1174,7 +1174,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             else
                 format = download
             if(self.stylelayers[index] !== undefined) 
-                jq("#data_links").append("<li><a href='http://maps.worldbank.org/datasets/" + self.stylelayers[index].source.replace('finder:','') +"."+format+"'>"+index+" ("+download+")</a></li>");
+                jq("#data_links").append("<li><a href='http://geocommons.com/ovlerays/" + self.stylelayers[index].source.replace('finder:','') +"."+format+"'>"+index+" ("+download+")</a></li>");
             
         })
         // if(self.stylelayers["Project Counts"] !== undefined)
