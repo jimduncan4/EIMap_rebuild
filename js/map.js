@@ -309,7 +309,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  	var s_attr = F1.WorldBank.extractives[indicator][attribute];
 
 	  	if(attribute == "Location"){
-	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, s_attr);
+	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute: s_attr["attribute"],categories:s_attr["categories"]});
 		  	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:.5}});
 	  	} 
 	  	else {
