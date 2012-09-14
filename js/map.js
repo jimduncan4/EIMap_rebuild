@@ -295,25 +295,29 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	},
 	setExtractiveIndicator: function(indicator, attribute, title, visible) {
 		var self = this;
-		if(indicator == "District revenues") {
+		//if user is looking at district revenues, hide mine/oil points
+		if(indicator == "District revenues") { 
 			self.map.showLayer(self.stylelayers["Mines"].guid, false);
           		self.map.showLayer(self.stylelayers["Oil wells"].guid, false);	      
           		self.map.showLayer(self.stylelayers["District revenues"].guid, true);
           	}
-	  	else {
+	  	// if user is looking at mine/oil points, hide district revenues
+	  	else { 
 		        self.map.showLayer(self.stylelayers["District revenues"].guid, false);
         		self.map.showLayer(self.stylelayers["Mines"].guid, true);
         		self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
 		}
 	  
-	  	var s_attr = F1.WorldBank.extractives[indicator][attribute];
-
+	  	//s_attr points to the extractives.js definitions to get values for filtering, naming tabs and titles, etc.
+	  	var s_attr = F1.WorldBank.extractives[indicator][attribute]; 
+		
+		//When showing by location, first assign image icons based on the Mineral Type attribute, then use setLayerStyle to trigger a change the in layer styling.
 	  	if(attribute == "Location"){
-	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute: s_attr["attribute"],categories:s_attr["categories"]});
+	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, s_attr);
 		  	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:.5}});
 	  	} 
+	  	//When showing by quantities, use the styling information contained in the layer definition - needs to be separate
 	  	else {
-    	  		s_attr = F1.WorldBank.extractives[indicator][attribute];
     	  		// s_attr.icon.selectedAttribute = attribute;
 	      		self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
 	  	}
