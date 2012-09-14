@@ -294,36 +294,42 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  return false;
 	},
 	setExtractiveIndicator: function(indicator, attribute, title, visible) {
-	  var self = this;
-	  if(indicator == "District revenues") {
-          self.map.showLayer(self.stylelayers["Mines"].guid, false);
-          self.map.showLayer(self.stylelayers["Oil wells"].guid, false);	      
-          self.map.showLayer(self.stylelayers["District revenues"].guid, true);
-	  }
-	  else {
-          self.map.showLayer(self.stylelayers["District revenues"].guid, false);
-          self.map.showLayer(self.stylelayers["Mines"].guid, true);
-          self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
-	  }
-      
-      var s_attr = F1.WorldBank.extractives[indicator];
-      log ("s_attr before location",s_attr);
-	  if(attribute == "Location"){
-	  	self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"Mineral type",categories:{"Gold": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/gold-14.png","Manganese": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/manganese-14.png","Bauxite": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/bauxite-14.png","Other": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/other-14.png"}});
-	  	checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Icons"]);
-	  	log ("Checking F1 string", checkstr);
-	  } else {
-    	  s_attr = F1.WorldBank.extractives[indicator][attribute];
-    	  // s_attr.icon.selectedAttribute = attribute;
-	      self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
-	      log("s_attr inside non-location",s_attr);
-	  }
-	  self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
-	         title: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["title"], 
-	         subtitle: s_attr["infoWindowFilter"]["subtitle"], tabs: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["tabs"]});
-	  jq('#layercontrol_extractives').html(title);
-	  return false;
+		var self = this;
+		if(indicator == "District revenues") {
+			self.map.showLayer(self.stylelayers["Mines"].guid, false);
+          		self.map.showLayer(self.stylelayers["Oil wells"].guid, false);	      
+          		self.map.showLayer(self.stylelayers["District revenues"].guid, true);
+          	}
+	  	else {
+		        self.map.showLayer(self.stylelayers["District revenues"].guid, false);
+        		self.map.showLayer(self.stylelayers["Mines"].guid, true);
+        		self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
+		}
+	  
+	  	var s_attr = F1.WorldBank.extractives[indicator];
+		log ("s_attr before location",s_attr);
+	  	
+	  	if(attribute == "Location"){
+	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"Mineral type",categories:{"Gold": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/gold-14.png","Manganese": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/manganese-14.png","Bauxite": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/bauxite-14.png","Other": "http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/other-14.png"}});
+	  		self.map.setLayerStyle(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Icons"]);
+	  		checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Icons"]);
+	  		log ("Checking F1 string", checkstr);
+	  	} 
+	  	else {
+    	  		s_attr = F1.WorldBank.extractives[indicator][attribute];
+    	  		// s_attr.icon.selectedAttribute = attribute;
+	      		self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
+	      		log("s_attr inside non-location",s_attr);
+	  	}
+	  
+	  	self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
+	  		title: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["title"], 
+	        	subtitle: s_attr["infoWindowFilter"]["subtitle"], tabs: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["tabs"]});
+	  	
+	  	jq('#layercontrol_extractives').html(title);
+	  	return false;
 	},
+	
 	toggleExtractive: function(layer,sector,visible) {   
 	    var self = this;
          if(layer == "Oil") {
