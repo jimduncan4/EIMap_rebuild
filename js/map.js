@@ -306,20 +306,16 @@ if(typeof(F1)=='undefined') {F1 = {};}
         		self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
 		}
 	  
-	  	var s_attr = F1.WorldBank.extractives[indicator];
-		log ("s_attr before location",s_attr);
-	  	
+	  	var s_attr = F1.WorldBank.extractives[indicator][attribute];
+
 	  	if(attribute == "Location"){
-	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Icons"]);
-		  	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:1}});
-		  	checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Icons"]);
-	  		log ("Checking F1 string", checkstr);
+	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, s_attr);
+		  	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:.5}});
 	  	} 
 	  	else {
     	  		s_attr = F1.WorldBank.extractives[indicator][attribute];
     	  		// s_attr.icon.selectedAttribute = attribute;
 	      		self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
-	      		log("s_attr inside non-location",s_attr);
 	  	}
 	  
 	  	self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
