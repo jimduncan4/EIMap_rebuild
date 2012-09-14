@@ -313,8 +313,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 		
 		//When showing by location, first assign image icons based on the Mineral Type attribute, then use setLayerStyle to trigger a change the in layer styling.
 	  	if(attribute == "Location"){
-	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, s_attr);
-		  	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:.5}});
+	  	 	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:.75}});
 	  	} 
 	  	//When showing by quantities, use the styling information contained in the layer definition - needs to be separate
 	  	else {
@@ -1327,8 +1326,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
             self.map.setMapStyle( {zoom: { offset: {x:15,y:90}}} )
             self.setExtractiveIndicator('Mines','Total production','Production',true)
             self.setExtractiveIndicator('Oil wells','Lift total','Production',true)
-            //self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,{attribute:"Mineral type",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})
-            //self.map.addLayerCategoryFilter(self.stylelayers["Mineral deposits"].guid,{attribute:"mineral ty",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})
+            self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,F1.WorldBank.extractives["Mines"]["Location"}})
+            self.map.addLayerCategoryFilter(self.stylelayers["Mineral deposits"].guid,F1.WorldbBank.extractives["Mineral deposits"]["Deposits"]}})
             self.minesPieChart() 
         }
         self.loadState();
