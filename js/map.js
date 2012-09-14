@@ -313,7 +313,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 		
 		//When showing by location, first assign image icons based on the Mineral Type attribute, then use setLayerStyle to trigger a change the in layer styling.
 	  	if(attribute == "Location"){
-	  	 	self.map.setLayerStyle(self.stylelayers[indicator].guid, {type: "POINT",icon:{size:.75}});
+	  	 	self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
 	  	} 
 	  	//When showing by quantities, use the styling information contained in the layer definition - needs to be separate
 	  	else {
