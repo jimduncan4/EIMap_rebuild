@@ -311,7 +311,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  	
 	  	if(attribute == "Location"){
 	  		self.map.setLayerStyle(self.stylelayers[indicator].guid, { type: "POINT", icon: { size: 5, symbol: "flagIcon" } });
-	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Icons"]);
+	  		self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, {attribute:"Mineral type",categories:{"Gold":"http://jimduncan4.github.com/EIMap_rebuild/images/icons/worldbank/gold-14.png"}});
 	  		checkstr = JSON.stringify(F1.WorldBank.extractives[indicator]["Icons"]);
 	  		log ("Checking F1 string", checkstr);
 	  	} 
