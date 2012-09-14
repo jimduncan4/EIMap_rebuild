@@ -3,7 +3,7 @@
   F1.WorldBank.extractives = {
   
   "Mineral deposits": {
-  "Deposits":{"icon":{"opacity":0.9,"size":.25},"attribute":"mineral ty","categories":{"Gold":iconhost+"extractives/small_gold.png","Bauxite":iconhost+"extractives/small_bauxite.png","Manganese":iconhost+"extractives/small_manganese.png","Other":iconhost+"extractives/small_other.png"}}
+  "Deposits":{"icon":{"opacity":1,"size":.25},"attribute":"mineral ty","categories":{"Gold":iconhost+"extractives/small_gold.png","Bauxite":iconhost+"extractives/small_bauxite.png","Manganese":iconhost+"extractives/small_manganese.png","Other":iconhost+"extractives/small_other.png"}}
   },
   "Population density": {},
   "Oil wells": {
